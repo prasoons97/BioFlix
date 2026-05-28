@@ -35,8 +35,8 @@ Live movie data is fetched from the TMDB API.
 
 2. Open `index.html` in your browser — no build tools needed!
 
->  The TMDB API token is included for demo purposes.
-> For production use, move it to an environment variable.
+> Copy `js/config.example.js` → `js/config.js` and add your TMDB Read Access Token.
+> Get one free at [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
 
 ##  Author
 

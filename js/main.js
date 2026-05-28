@@ -1,6 +1,3 @@
-// TMDB API TOKEN; Used to authenticate requests to the movie database
-const TMDB_TOKEN =
-  "REDACTED_TMDB_TOKEN";
 
 //EMAIL VALIDATION: Grabs the email input, button, and error text from HTML
 const emailInput = document.getElementById("email");
