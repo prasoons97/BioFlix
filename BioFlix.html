@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
+     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bioflix</title>
+
+    <title>BioFlix</title>
     <link rel="stylesheet" href="BioFlix.css">
 </head>
 
@@ -21,6 +23,7 @@
                     <path
                         d="M328 32C358.9 32 384 57.1 384 88C384 118.9 358.9 144 328 144C297.1 144 272 118.9 272 88C272 57.1 297.1 32 328 32zM240 300.7L193.7 363.1C183.2 377.3 163.1 380.3 148.9 369.7C134.7 359.1 131.7 339.1 142.3 324.9L212.8 229.9C238 196 277.7 176 320 176C362.3 176 402 196 427.2 229.9L497.7 324.9C508.2 339.1 505.3 359.1 491.1 369.7C476.9 380.3 456.9 377.3 446.3 363.1L400 300.7L400 576C400 593.7 385.7 608 368 608C350.3 608 336 593.7 336 576L336 416C336 407.2 328.8 400 320 400C311.2 400 304 407.2 304 416L304 576C304 593.7 289.7 608 272 608C254.3 608 240 593.7 240 576L240 300.7zM488 448C483.6 448 480 451.6 480 456C480 469.3 469.3 480 456 480C442.7 480 432 469.3 432 456C432 425.1 457.1 400 488 400C518.9 400 544 425.1 544 456L544 584C544 597.3 533.3 608 520 608C506.7 608 496 597.3 496 584L496 456C496 451.6 492.4 448 488 448z" />
                 </svg>
+
             </button>
             <select class="lang">
                 <option>English</option>
@@ -28,17 +31,14 @@
                 <option>Danish</option>
                 <option>Hindi</option>
             </select>
-            <button class="signin">Sign in</button>
+            <button class="signin">Sign In</button>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-collage">
-            <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
-            <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
-            <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
-            <img src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg">
+        <div class="hero-collage" id="heroCollage">
+            <!-- images will be loaded by JS -->
         </div>
         <div class="hero-content">
             <h2>Unlimited films,<br>series and more</h2>
@@ -46,7 +46,7 @@
 
             <div class="email-box">
                 <input id="email" type="email" placeholder="Email address" aria-describedby="emailError" />
-                <button id="getStarted">Get started</button>
+                <button id="getStarted">Get Started</button>
             </div>
 
             <p class="email-error" id="emailError">
@@ -61,42 +61,23 @@
     <section class="trending">
         <h3>Trending now</h3>
 
+        <div class="genre-pills" id="genrePills">
+            <button class="pill active" data-id="">All</button>
+            <button class="pill" data-id="28">Action</button>
+            <button class="pill" data-id="35">Comedy</button>
+            <button class="pill" data-id="27">Horror</button>
+            <button class="pill" data-id="18">Drama</button>
+            <button class="pill" data-id="878">Sci-Fi</button>
+        </div>
+
         <div class="slider-wrapper">
-            <button class="slide-btn left" id="slideLeftBtn" onclick="slideLeft()">❮</button>
+            <button class="slide-btn left" id="slideLeftBtn">❮</button>
 
             <div class="cards" id="cardSlider">
-                <div class="card">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDQ5OWQ0MWEtMDhhOS00YmVkLTg4M2YtNTE2YjAyMDg3YTU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://assets.lastdodo.com/image/ld_medium/plain/assets/catalog/assets/2019/8/31/7/e/c/pdf_7ec4a894-cbf0-11e9-9410-98a46c6e0a95.jpg"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2019526/rs_1080x1688-190626114425-1080-Dora-Movie-JP-0626.jpg?fit=around%7C776:1213&output-quality=90&crop=776:1213;center,top"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://www.tallengestore.com/cdn/shop/products/Art_Poster_-_Sicario_-_Tallenge_Hollywood_Collection_e47335be-9461-4310-a579-cb4f0b6d6f0b.jpg?v=1505078991"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://cdn.studiomoviegrill.com/content/0187ad5f-07f8-42ae-8d7c-00edc54280e0.jpg" alt="">
-                </div>
-                <div class="card">
-                    <img src="https://assets.lastdodo.com/image/ld_medium/plain/assets/catalog/assets/2019/8/31/7/e/c/pdf_7ec4a894-cbf0-11e9-9410-98a46c6e0a95.jpg"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://www.tallengestore.com/cdn/shop/products/Art_Poster_-_Sicario_-_Tallenge_Hollywood_Collection_e47335be-9461-4310-a579-cb4f0b6d6f0b.jpg?v=1505078991"
-                        alt="">
-                </div>
-                <div class="card">
-                    <img src="https://cdn.studiomoviegrill.com/content/0187ad5f-07f8-42ae-8d7c-00edc54280e0.jpg" alt="">
-                </div>
+
+                <!-- cards will be loaded here by JS -->
             </div>
-            <button class="slide-btn right" id="slideRightBtn" onclick="slideRight()">❯</button>
+            <button class="slide-btn right" id="slideRightBtn">❯</button>
         </div>
     </section>
 
@@ -144,131 +125,20 @@
         </div>
     </footer>
 
-
-    <script>
-
-        const emailInput = document.getElementById("email");
-        const btn = document.getElementById("getStarted");
-        const errorText = document.getElementById("emailError");
-
-        const isValidEmail = email =>
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-        function validateEmail(force = false) {
-            const value = emailInput.value.trim();
-            const valid = isValidEmail(value);
-
-            emailInput.classList.toggle("invalid", !valid && value !== "");
-
-            if (force) {
-                emailInput.classList.add("touched");
-                errorText.classList.toggle("show", !valid);
-            } else {
-                emailInput.classList.remove("touched");
-                errorText.classList.remove("show");
-            }
-
-            if (valid) {
-                emailInput.classList.remove("invalid", "touched");
-                errorText.classList.remove("show");
-            }
-
-            return valid;
-        }
-
-        // While typing (soft validation)
-        emailInput.addEventListener("input", () => {
-            validateEmail(false);
-        });
-
-        // On blur (lost focus → strong warning)
-        emailInput.addEventListener("blur", () => {
-            validateEmail(true);
-        });
-
-        // On button click (force validation)
-        btn.addEventListener("click", () => {
-            if (validateEmail(true)) {
-                console.log("Valid email:", emailInput.value);
-            }
-        });
-
-        const slider = document.getElementById('cardSlider');
-        const leftBtn = document.getElementById('slideLeftBtn');
-        const rightBtn = document.getElementById('slideRightBtn');
-
-        function updateButtons() {
-            const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-
-            // Left button
-            if (slider.scrollLeft <= 0) {
-                leftBtn.classList.add('hidden');
-            } else {
-                leftBtn.classList.remove('hidden');
-            }
-
-            // Right button
-            if (slider.scrollLeft >= maxScrollLeft - 1) {
-                rightBtn.classList.add('hidden');
-            } else {
-                rightBtn.classList.remove('hidden');
-            }
-        }
-
-        function slideLeft() {
-            slider.scrollLeft -= 400;
-        }
-
-        function slideRight() {
-            slider.scrollLeft += 400;
-        }
-
-        // Update on scroll
-        slider.addEventListener('scroll', updateButtons);
-
-        // Initial check
-        updateButtons();
-
-        const themeBtn = document.getElementById("themeBtn");
-        const body = document.body;
-
-        // Detect system preference
-        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-        // 🔍 LOG the real system theme
-        console.log("System theme detected:", systemDark ? "dark" : "light");
-
-        // 1. Check saved theme
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-        } else {
-            // 2. Detect system preference
-            const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            body.classList.add(systemDark ? "dark" : "light");
-        }
-
-        // 3. Toggle theme manually
-        themeBtn.addEventListener("click", () => {
-            const isDark = body.classList.contains("dark");
-
-            body.classList.toggle("dark", !isDark);
-            body.classList.toggle("light", isDark);
-
-            // 4. Save user choice
-            localStorage.setItem("theme", isDark ? "light" : "dark");
-        });
-
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
-            if (!localStorage.getItem("theme")) {
-                body.classList.toggle("dark", e.matches);
-                body.classList.toggle("light", !e.matches);
-            }
-        });
-
-    </script>
-
+    <button class="scroll-top" id="scrollTop">↑</button>
+    <!-- Movie Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">✕</button>
+            <img class="modal-poster" id="modalPoster" src="" alt="" />
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-rating" id="modalRating"></p>
+                <p class="modal-overview" id="modalOverview"></p>
+            </div>
+        </div>
+    </div>
+    <script src="BioFlix.js"></script>
 
 </body>
 
