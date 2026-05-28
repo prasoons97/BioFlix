@@ -4,7 +4,7 @@ A Netflix-inspired movie discovery app built with HTML, CSS, and vanilla JavaScr
 Live movie data is fetched from the TMDB API.
 
 ##  Preview
-![BioFlix Screenshot](screenshot.png)
+![BioFlix Screenshot](assets/screenshot.png)
 
 ## Features
 
@@ -33,7 +33,7 @@ Live movie data is fetched from the TMDB API.
    git clone https://github.com/prasoons97/BioFlix.git
 ```
 
-2. Open `BioFlix.html` in your browser — no build tools needed!
+2. Open `index.html` in your browser — no build tools needed!
 
 >  The TMDB API token is included for demo purposes.
 > For production use, move it to an environment variable.
